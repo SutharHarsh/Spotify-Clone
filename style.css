@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+    /* font-weight: 500; */
+}
+
+.left {
+    width: 25vw;
+    padding: 10px;
+}
+
+.home ul li {
+    width: 20px;
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.library {
+    margin-top: 10px;
+    min-height: 70vh;
+    position: relative;
+}
+
+.heading .lib_ico img {
+    width: 20px;
+    padding-right: 8px;
+}
+
+.heading h2 {
+    font-size: 15px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 10px;
+    font-size: 12px;
+    font-weight: 200;
+    flex-direction: column;
+    row-gap: 3px;
+    color: rgb(169, 169, 169);
+}
+
+.footer .row1 {
+    column-gap: 15px;
+    cursor: pointer;
+}
+
+.footer .row2 {
+    column-gap: 15px;
+    cursor: pointer;
+}
+
+.right {
+    width: 75vw;
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+
+.header {
+    background: #202020;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header .nav {
+    justify-content: space-between;
+}
+
+.spotifyPlaylist h1 {
+    margin: 10px;
+}
+
+.cardContainer {
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 180px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
