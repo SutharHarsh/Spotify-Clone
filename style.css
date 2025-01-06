@@ -62,6 +62,7 @@
     margin-top: 10px;
     padding-top: 10px;
     margin-right: 10px;
+    position: relative;
 }
 
 .header {
@@ -87,9 +88,33 @@
 
 .card {
     width: 180px;
+    position: relative;
+}
+
+.card .playbt {
+    position: absolute;
+    right: 10px;
+    top: 135px;
+    opacity: 0;
+}
+
+.card:hover {
+    .playbt {
+        opacity: 100;
+        transition: all 0.3s ease-out;
+    }
 }
 
 .card img {
     width: 100%;
     object-fit: contain;
+}
+
+.playBar {
+    position: absolute;
+    bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: rgb(37, 179, 37);
+    width: 100%;
 }
