@@ -34,6 +34,10 @@
             </div>
             <h2>Your Library</h2>
           </div>
+          <div class="songList">
+            <ul>
+            </ul>
+          </div>
           <div class="footer flex">
             <div class="row1 flex">
               <div>Legal</div>
@@ -167,18 +171,26 @@
             </div>
           </div>
           <div class="playBar rounded flex justify-center">
-            <div class="previousBt">
-              <img src="/assets/icons/previous.svg" alt="Previous Song">
+            <div class="controls flex">
+              <div class="songInfo">
+              </div>
+              <div class="songButtons flex justify-center align-items-center invert">
+                <img id="previous" src="/assets/icons/previous.svg" alt="Previous Song">
+                <img id="play" src="/assets/icons/play.svg" alt="Play/Pause Button" />
+                <img id="next" src="/assets/icons/nextSong.svg" alt="Next Song Button">
+              </div>
+              <div class="songTime">
+              </div>
             </div>
-            <div class="playBt">
-              <img src="/assets/icons/play.svg" alt="Play/Pause Button" />
-            </div>
-            <div class="nextSongBt">
-              <img src="/assets/icons/nextSong.svg" alt="Next Song Button">
+            <div class="seekbar_container flex justify-center align-items-center">
+              <div class="seekbar">
+                <div class="circle"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script src="index.js"></script>
 </html>

@@ -1,10 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Css for the Bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(43, 43, 43);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(37, 179, 37);
+    border-radius: 5px;
+}
+
+/* Main Css of the Project */
+
 * {
     margin: 0;
     padding: 0;
     font-family: "Poppins", serif;
-    /* font-weight: 500; */
 }
 
 .left {
@@ -34,6 +51,29 @@
 
 .heading h2 {
     font-size: 15px;
+}
+
+.songList {
+    padding: 0px 10px;
+    margin-top: 10px;
+    overflow: auto;
+    scrollbar-color: black;
+    height: 344px;
+}
+
+.songList ul li {
+    margin-top: 10px;
+    padding: 12px;
+    list-style: decimal;
+    gap: 20px;
+    justify-content: space-between;
+    background-color: rgb(43, 43, 43);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.songList ul li .songLeft {
+    gap: 20px;
 }
 
 .footer {
@@ -112,9 +152,43 @@
 
 .playBar {
     position: absolute;
+    flex-direction: column;
+    gap: 30px;
     bottom: 0;
     padding-top: 10px;
     padding-bottom: 10px;
     background: rgb(37, 179, 37);
     width: 100%;
 }
+
+.songButtons {
+    gap: 10px;
+}
+
+.songButtons img {
+    cursor: pointer;
+}
+
+.controls {
+    justify-content: space-around;
+}
+
+.seekbar {
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 99%;
+    height: 4px;
+    background: white;
+    cursor: pointer;
+}
+
+.seekbar .circle {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    bottom: 11px;
+    height: 12px;
+    width: 12px;
+    transition: left 0.5s;
+}
+
