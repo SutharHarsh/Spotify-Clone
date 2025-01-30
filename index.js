@@ -1,5 +1,6 @@
 console.log("Let's write JavaScript")
 let currentSong = new Audio
+let songs
 
 async function getSongs() {
     let a = await fetch("http://127.0.0.1:3000/assets/songs/")
@@ -44,7 +45,7 @@ const playMusic = (track, pause=false) => {
 async function main() {
 
     //get all the songs
-    let songs = await getSongs()
+    songs = await getSongs()
 
     playMusic(songs[0], true)
 
@@ -94,11 +95,39 @@ async function main() {
         document.querySelector(".circle").style.left = (currentSong.currentTime/currentSong.duration) *100 + "%";
     })
 
-    // Add an evenlistener to seekbar
+    // Add an eventlistener to seekbar
     document.querySelector(".seekbar").addEventListener("click", e=> {
         let percent = (e.offsetX/e.target.getBoundingClientRect().width) *100;
         document.querySelector(".circle").style.left = percent + "%";
         currentSong.currentTime = ((currentSong.duration)* percent) / 100
+    })
+
+    // Add an eventlistener to hemburger
+    document.querySelector(".hemburger").addEventListener("click", e => {
+        document.querySelector(".left").style.left = 0;
+    })
+
+    // Add an eventlistener to close
+    document.querySelector(".close").addEventListener("click", e => {
+        document.querySelector(".left").style.left = "-150%";
+    })
+
+    // Add an eventlistener to next button
+    next.addEventListener("click", e => {
+        console.log("next clicked")
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1) [0])
+        if((index+1) >= 0) {
+            playMusic(songs[index+1])
+        }
+    })
+
+    // Add an eventlistener to next button
+    previous.addEventListener("click", e => {
+        console.log("previous clicked")
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1) [0])
+        if((index+1) < songs.length) {
+            playMusic(songs[index+1])
+        }
     })
 
     
