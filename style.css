@@ -105,6 +105,54 @@
     position: relative;
 }
 
+.signup_button {
+    background: #202020;
+    color: white;
+    border: none;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+    font-size: medium;
+    margin-right: 10px;
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+
+.signup_button:hover {
+    background: black;
+    border-radius: 30px;
+}
+
+.login_button {
+    background: white;
+    color: #202020;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 30px;
+    font-size: medium;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.right_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_button:hover {
+    background: rgb(216, 216, 216);
+}
+
 .header {
     background: #202020;
     margin-left: 10px;
@@ -120,15 +168,21 @@
 }
 
 .cardContainer {
-    padding: 30px;
+    height: 350px;
+    padding: 20px;
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
+    overflow-y: scroll;
 }
 
 .card {
     width: 180px;
+    max-height: fit-content;
     position: relative;
+    background: rgb(36, 36, 36);
+    cursor: pointer;
+    transition: all 0.5s;
 }
 
 .card .playbt {
@@ -139,6 +193,7 @@
 }
 
 .card:hover {
+    background: rgb(58, 58, 58);
     .playbt {
         opacity: 100;
         transition: all 0.3s ease-out;
@@ -152,6 +207,7 @@
 
 .playBar {
     position: absolute;
+    display: flex;
     flex-direction: column;
     gap: 15px;
     bottom: 0;
@@ -171,6 +227,28 @@
 
 .controls {
     justify-content: space-around;
+}
+
+.time-volume {
+    gap: 20px;
+}
+
+.volume {
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.range input{
+    accent-color: white;
+    cursor: pointer;
+}
+
+.seekbar_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .seekbar {
@@ -194,10 +272,12 @@
 
 .hemburger {
     display: none;
+    cursor: pointer;
 }
 
 .close {
     display: none;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -216,7 +296,12 @@
     }
 
     .hemburger {
-        display: block;
+        display: flex;
+        align-items: center;
+    }
+
+    .arrows {
+        display: none;
     }
 
     .right_arrow {
@@ -263,9 +348,18 @@
 
     .playBar {
         position: relative;
+        height: 130px;
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
+        gap: 50px;
+    }
+
+    .controls {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
     }
 
     .songInfo {
@@ -274,12 +368,27 @@
     }
 
     .songTime {
-        font-size: small;
-        display: none;
+        font-size: medium;
+        /* display: none; */
     }
 
     .songButtons img {
         width: 25px;
         /* padding-right: 20px; */
+    }
+
+    .seekbar_container {
+        padding: 10px;
+    }
+
+    .seekbar_container .seekbar {
+        position: absolute;
+        /* top: 20px; */
+        bottom: 12px;
+    }
+
+    .seekbar_container .circle {
+        position: absolute;
+        top: -4px;
     }
 }
