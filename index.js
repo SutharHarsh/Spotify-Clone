@@ -72,7 +72,7 @@ const playMusic = (track, pause = false) => {
 
 async function displayAlbums() {
     console.log("Display Albums");
-    let a = await fetch("assets/songs/");
+    let a = await fetch("/assets/songs/");
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
